@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GESTÃO DE UNIDADES CURRICULARES</h1>
+        <nav>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="#">Unidades Curriculares</a>
+            <a href="edicoes.html">Edições</a>
+            <a href="matriculas.html">Matrículas</a>
+        </nav>
+    </header>
+    <main>
+        <h2>ADICIONAR UNIDADE CURRICULAR</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="nome">nome:</label>
+            <input type="text" id="nome" required>
+            <label for="duracao">duração:</label>
+            <input type="duracao" id="duracao" required>
+            <button type="submit" class="btn-adicionar">
+                ADICIONAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>PESQUISAR UNIDADE CURRICULAR</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="nome">nome:</label>
+            <input type="text" id="nome" required>
+            <label for="duracao">duração:</label>
+            <input type="number" id="duracao" required>
+            <button type="submit" class="btn-pesquisar">
+                PESQUISAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>LISTAR UCS</h2>
+        <section id="lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>nome</th>
+                        <th>duração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>nome</td>
+                    <td>duração</td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-atualizar">
+                                ATUALIZAR
+                            </button>
+                        </form>
+                    </td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-remover">
+                                REMOVER
+                            </button>
+                        </form>
+                    </td>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido com Spring Boot + Spring Data JPA e Thymeleaf.</p>
+    </footer>
+</body>
+</html>

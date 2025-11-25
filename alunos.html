@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GESTÃO DE ALUNOS</h1>
+        <nav>
+            <a href="#">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="ucs.html">Unidades Curriculares</a>
+            <a href="edicoes.html">Edições</a>
+            <a href="matriculas.html">Matrículas</a>
+        </nav>
+    </header>
+    <main>
+        <h2>ADICIONAR ALUNO</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="nome">nome:</label>
+            <input type="text" id="nome" required>
+            <label for="email">email:</label>
+            <input type="email" id="email" required>
+            <label for="idade">idade:</label>
+            <input type="number" id="number" required>
+            <button type="submit" class="btn-adicionar">
+                ADICIONAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>PESQUISAR ALUNO</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="nome">nome:</label>
+            <input type="text" id="nome" required>
+            <label for="email">email:</label>
+            <input type="email" id="email">
+            <label for="idade">idade:</label>
+            <input type="number" id="number">
+            <button type="submit" class="btn-pesquisar">
+                PESQUISAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>LISTAR ALUNOS</h2>
+        <section id="lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>nome</th>
+                        <th>email</th>
+                        <th>idade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Nome</td>
+                    <td>Email</td>
+                    <td>0</td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-atualizar">
+                                ATUALIZAR
+                            </button>
+                        </form>
+                    </td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-remover">
+                                REMOVER
+                            </button>
+                        </form>
+                    </td>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido com Spring Boot + Spring Data JPA e Thymeleaf.</p>
+    </footer>
+</body>
+</html>

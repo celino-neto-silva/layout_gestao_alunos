@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Edições</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GESTÃO DE EDIÇÕES</h1>
+        <nav>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="ucs.html">Unidades Curriculares</a>
+            <a href="#">Edições</a>
+            <a href="matriculas.html">Matrículas</a>
+        </nav>
+    </header>
+    <main>
+        <h2>ADICIONAR EDIÇÃO</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="nome">descrição:</label>
+            <input type="text" id="nome" required>
+            
+            <label for="curso">curso:</label>
+            <select name="curso" id="curso" style="margin-right: 30px;">
+                <option value="" class="option">Selecione o curso</option>
+            </select>
+            <br>
+            <br>
+            <label for="data_inicio">data de início:</label>
+            <input type="date" id="data_inicio"  required>
+
+            <label for="data_fim">data de fim:</label>
+            <input type="date" id="data_fim">
+            <br>
+            <br>
+            <label for="grade_curricular">grade curricular:</label>
+            <select name="grade_curricular" id="grade_curricular">
+                <option value="">Selecione a(s) unidades curriculares pertencentes</option>    
+            </select>
+            <button type="submit" class="btn-adicionar">
+                ADICIONAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>PESQUISAR EDIÇÃO</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="descricao">descrição:</label>
+            <input type="text" id="descricao" required>
+            <button type="submit" class="btn-pesquisar">
+                PESQUISAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>LISTAR EDIÇÕES</h2>
+        <section id="lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>descrição</th>
+                        <th>curso</th>
+                        <th>grade curricular</th>
+                        <th>duração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>descrição</td>
+                    <td>curso</td>
+                    <td>grade curricular</td>
+                    <td>duração</td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-atualizar">
+                                ATUALIZAR
+                            </button>
+                        </form>
+                    </td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-remover">
+                                REMOVER
+                            </button>
+                        </form>
+                    </td>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido com Spring Boot + Spring Data JPA e Thymeleaf.</p>
+    </footer>
+</body>
+</html>

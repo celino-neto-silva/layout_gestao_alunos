@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Matrículas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GESTÃO DE MATRÍCULAS</h1>
+        <nav>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="ucs.html">Unidades Curriculares</a>
+            <a href="edicoes.html">Edições</a>
+            <a href="#">Matrículas</a>
+        </nav>
+    </header>
+    <main>
+        <h2>ADICIONAR MATRÍCULA</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="aluno">aluno:</label>
+            <select name="aluno" id="aluno" style="margin-right: 30px;">
+                <option value="" class="option">Selecione o aluno</option>
+            </select>
+            <label for="edicao">edição de curso:</label>
+            <select name="aluno" id="aluno" style="margin-right: 30px;">
+                <option value="" class="option">Selecione a edição</option>
+            </select>
+            <button type="submit" class="btn-adicionar">
+                ADICIONAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>PESQUISAR MATRÍCULA</h2>
+        <section id="formulario">
+        <form action="#">
+            <label for="aluno">aluno:</label>
+            <select name="aluno" id="aluno" style="margin-right: 30px;">
+                <option value="" class="option">Selecione o aluno</option>
+            </select>
+            <label for="edicao">edição de curso:</label>
+            <select name="aluno" id="aluno" style="margin-right: 30px;">
+                <option value="" class="option">Selecione a edição</option>
+            </select>
+            <button type="submit" class="btn-pesquisar">
+                PESQUISAR
+            </button>
+        </form>
+        </section>
+        <br>
+        <h2>LISTAR MATRÍCULAS</h2>
+        <section id="lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>aluno</th>
+                        <th>edição de curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>aluno</td>
+                    <td>edição de curso</td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-atualizar">
+                                ATUALIZAR
+                            </button>
+                        </form>
+                    </td>
+                    <td class="campo_menor">
+                        <form action="#">
+                            <input type="hidden" name="id">
+                            <button type="submit" class="btn-remover">
+                                REMOVER
+                            </button>
+                        </form>
+                    </td>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido com Spring Boot + Spring Data JPA e Thymeleaf.</p>
+    </footer>
+</body>
+</html>
